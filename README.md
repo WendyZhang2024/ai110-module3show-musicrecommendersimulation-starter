@@ -36,6 +36,14 @@ can only ever surface more of what you already like.
 This project is a deliberately small content-based recommender. It ignores other
 users completely and scores every song against a single user's stated taste.
 
+**The catalog:** 20 songs across 16 genres in `data/songs.csv`. The ten starter
+rows were extended with ten more that cover gaps in the original file: j-pop,
+anime rock, classical, cinematic, dream pop, edm, R&B and mandopop were missing,
+and the original ten had no track between 0.45 and 0.75 energy. The numeric
+columns (energy, valence, danceability, acousticness) are hand-assigned estimates
+of how each track feels rather than measurements from an audio API, so they are
+internally consistent but only approximate.
+
 **What each `Song` stores:** `id`, `title`, `artist`, `genre`, `mood`, `energy`
 (0.0–1.0), `tempo_bpm`, `valence`, `danceability`, `acousticness`. Only genre,
 mood and energy drive the score right now. The rest are loaded and left available
@@ -63,12 +71,13 @@ the rule above, sort from highest to lowest, and return the top k (default 5). A
 single score means little without the rest of the list to compare it against,
 which is why scoring and ranking stay separate steps.
 
-**Known weakness in this design:** a genre match alone is worth 2.0, which is
-enough to outvote a completely wrong mood. Run the default pop / happy / energy
-0.8 profile and the aggressive "Gym Hero" lands second, purely on its pop tag.
-The catalog is also small and skewed: 3 of the 10 songs are lofi, and energy
-clusters at the extremes with nothing between 0.42 and 0.75, so a user targeting
-the middle of the range gets weak matches.
+**Known weakness in this design:** a genre match alone is worth 2.0, enough to
+outvote a completely wrong mood and even a wildly wrong energy level. Ask for
+`classical / euphoric / energy 0.90` and the top result is still Gymnopédie No.1,
+a calm piano piece sitting at energy 0.12, because its genre tag alone carries
+2.0. The catalog is also uneven: 13 of the 16 genres appear exactly once while
+lofi alone accounts for 3 songs, and energy is still barbell-shaped, with 10
+songs below 0.45, only 4 between 0.45 and 0.75, and 6 above.
 
 ---
 

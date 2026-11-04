@@ -9,3 +9,13 @@ id,title,artist,genre,mood,energy,tempo_bpm,valence,danceability,acousticness
 8,Night Drive Loop,Neon Echo,synthwave,moody,0.75,110,0.49,0.73,0.22
 9,Focus Flow,LoRoom,lofi,focused,0.40,80,0.59,0.60,0.78
 10,Rooftop Lights,Indigo Parade,indie pop,happy,0.76,124,0.81,0.82,0.35
+11,打上花火,"DAOKO, 米津玄師",j-pop,energetic,0.72,100,0.62,0.58,0.25
+12,晩餐歌,tuki.,j-pop,energetic,0.62,128,0.55,0.66,0.30
+13,My Castle Town,Toby Fox,game ost,nostalgic,0.32,76,0.30,0.28,0.88
+14,火炎,QUEEN BEE,anime rock,passionate,0.85,132,0.45,0.55,0.12
+15,Piscina spedup,"E Ugo, vh, Ef, jzxx",edm,aggressive,0.95,160,0.40,0.90,0.03
+16,Gymnopédie No.1,Erik Satie,classical,calm,0.12,70,0.30,0.15,0.98
+17,Cornfield Chase,Hans Zimmer,cinematic,dreamy,0.30,96,0.35,0.22,0.70
+18,Apocalypse,Cigarettes After Sex,dream pop,melancholy,0.35,92,0.22,0.40,0.62
+19,Like I Do,"J.Tajor, sunKis",r&b,romantic,0.65,100,0.72,0.74,0.20
+20,冷夜,陈默之,mandopop,sad,0.32,75,0.25,0.50,0.65
